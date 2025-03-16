@@ -1,0 +1,17 @@
+{
+	"TablesPage": {
+		"newTable" : "+ New Table",
+		"searchTables" : "Search tables",
+		"alertMsg":"Tables in the table bar are ordered according to this list. Drag a table in this list to change its position in the table bar. You can also copy, move, or delete a table using the icons.",
+		"fromScratch":"From scratch",
+		"designYourOwnTable":"Design your own table",
+		"usingConnected":"Using connected data",
+		"connected":"Connect to an app, service, or CSV",
+		"tableName":"Table 1"	
+	},
+	
+	"AnalyzePage":{
+		"userName":"User Name",
+		"passWord":"Password page"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"UXP-1121":{
+		"tablesColumnsNames":"Table,Fields,Related To",
+		"dailyOptions":"Last 7 Days,Last 30 Days,Custom (max 90 days)"
+	},
+	"UXP-1122":{
+		"ddOptions":"From scratch,Design your own table,Using connected data,Connect to an app, service, or CSV"
+	},
+	"UXP-1124":{
+			"deleteThisTable?":"Delete this Table?",
+			"deleteTable":"Delete Table",
+			"cancel":"Cancel",
+			"deleteMsg1":"Are you sure you want to delete the Projects table?",
+			"deleteMsg2":"This cannot be undone. It will permanently delete all data in the table and invalidate all relationships with this table.",
+			"deleteMsg3":"Type YES to confirm that you want to delete this table:"
+		}
+}
