@@ -31,7 +31,6 @@ public class SeleniumHelper {
             sleepWait(waitTime);
             if (elem.isDisplayed() == true) {
                 sleepWait(waitTime);
-             //   wait.until(ExpectedConditions.or(ExpectedConditions.invisibilityOf(elem)));
                 wait.until(ExpectedConditions.or(ExpectedConditions.invisibilityOf(elem)));
                 waitForNGToLoad();
             }

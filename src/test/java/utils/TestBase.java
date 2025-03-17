@@ -1,10 +1,7 @@
 package utils;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,13 +12,8 @@ public class TestBase {
 
 	public WebDriver WebDriverManager() throws IOException {
 
-		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "//src//test//resources//global.properties");
-		prop.load(fis);
-
 		String url = PropertyHelper.getGlobalPropertyValue("QAUrl");
-		String browser_Properties = prop.getProperty("browser");
+		String browser_Properties = PropertyHelper.getGlobalPropertyValue("browser");
 		String browser_Maven = System.getProperty("browser");
 		String browser = browser_Maven != null ? browser_Maven : browser_Properties;
 

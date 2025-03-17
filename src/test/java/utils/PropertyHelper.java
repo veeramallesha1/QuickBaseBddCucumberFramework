@@ -17,6 +17,8 @@ public class PropertyHelper {
 			+ "//src//main//resources//data//labels.json";
 	private static final String TEST_DATA_FILE_PATH = System.getProperty("user.dir")
 			+ "//src//main//resources//data//testData.json";
+	private static final String GLOBAL_DATA_FILE_PATH = System.getProperty("user.dir")
+			+ "//src//test//resources//global.properties";
 
 	public static Map<String, String> loadResourcefile(String url, String pageName) {
 		Map<String, String> resourceMap = new HashMap<>();
@@ -39,8 +41,7 @@ public class PropertyHelper {
 		return resourceMap;
 	}
 
-	// Read test data from JSON based on the key (e.g., "UXP-1121") and return as
-	// Map
+	// Read test data from JSON based on the key (e.g., "UXP-1121") and return as Map
 	public static Map<String, String> readTestDataJson(String testCaseId) {
 		Map<String, String> dataMap = new HashMap<String, String>();
 		try {
@@ -64,8 +65,7 @@ public class PropertyHelper {
 	
 	public static String getGlobalPropertyValue(String key) throws IOException {
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "//src//test//resources//global.properties");
+		FileInputStream fis = new FileInputStream(GLOBAL_DATA_FILE_PATH);
 		prop.load(fis);
 		String value = prop.getProperty(key);	
 		return value;
