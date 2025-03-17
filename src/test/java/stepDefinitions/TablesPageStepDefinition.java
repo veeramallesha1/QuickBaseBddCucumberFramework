@@ -38,9 +38,9 @@ public class TablesPageStepDefinition {
 		
 	}
 	@Then("^Verify The All Lables Present In Table Page$")
-	public void verifyTheAllLablesPresentITablePage() throws Exception {
+	public void verifyTheAllLablesPresentInTablePage() throws Exception {
 		tablesPage= textContextSetup.homePage.getTablesPage();
-		results = tablesPage.verifyTheAllLablesPresentITablePage();	
+		results = tablesPage.verifyTheAllLablesPresentInTablePage();	
 		assertThat(results.containsValue(false), is(false));
 		
 	}

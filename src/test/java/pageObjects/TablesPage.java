@@ -127,7 +127,13 @@ public class TablesPage {
 		PageFactory.initElements(driver, this);
 
 	}
-
+	
+	/***
+	 * User Will Login Into Application
+	 * @author Veeramallesha CN
+	 * @return void
+	 * @throws Exception
+	 ***/
 	public void userLoginIntoToApplicataion() throws Exception {
 		seleniumHelper.click(btnNo);
 		seleniumHelper.click(lblSignMsg);
@@ -140,6 +146,12 @@ public class TablesPage {
 		seleniumHelper.sleepWait(3);
 	}
 	
+	/***
+	 * User Will Navigate To Tables Page
+	 * @author Veeramallesha CN
+	 * @return void
+	 * @throws Exception
+	 ***/
 	public void userInTablePage() throws Exception {
 		seleniumHelper.click(icnProjectSelection);
 		seleniumHelper.click(lblAppSetting);
@@ -147,7 +159,13 @@ public class TablesPage {
 		seleniumHelper.click(lnkTables);
 	}
 	
-	public HashMap<String, Boolean> verifyTheAllLablesPresentITablePage() throws Exception {
+	/***
+	 * Verify The All Lables Present In TablePage
+	 * @author Veeramallesha CN
+	 * @return HashMap<String, Boolean>
+	 * @throws Exception
+	 ***/
+	public HashMap<String, Boolean> verifyTheAllLablesPresentInTablePage() throws Exception {
 		Map<String, String> dataMap = PropertyHelper.readTestDataJson("UXP-1121");
 		seleniumHelper.click(lblTableBox);
 		String newTable = lblNewTableCreate.getText().trim();
@@ -159,6 +177,12 @@ public class TablesPage {
 		return results;
 	}
 	
+	/***
+	 * Verify Columns Header Of The TablePage
+	 * @author Veeramallesha CN
+	 * @return HashMap<String, Boolean>
+	 * @throws Exception
+	 ***/
 	public HashMap<String, Boolean> verifyColumnsHeaderOfTheTablePage() throws Exception {
 		Map<String, String> dataMap = PropertyHelper.readTestDataJson("UXP-1121");
 		ArrayList<String> actualColumnsNames = new ArrayList<String>();
@@ -169,7 +193,13 @@ public class TablesPage {
 		results.put("ColumnsNames", actualColumnsNames.equals(expectedColumnsNames));
 		return results;
 	}
-	
+		
+	/***
+	 * Verify Dropdown Options Of NewTable Page
+	 * @author Veeramallesha CN
+	 * @return HashMap<String, Boolean>
+	 * @throws Exception
+	 ***/
 	public HashMap<String, Boolean> verifyDropdownOptionsOfNewTable() throws Exception {
 		seleniumHelper.sleepWait(3);
 		seleniumHelper.click(txtAlertMsg);
@@ -184,6 +214,12 @@ public class TablesPage {
 		return results;
 	}
 	
+	/***
+	 * Verify The Search Functionality In NewTable Page
+	 * @author Veeramallesha CN
+	 * @return HashMap<String, Boolean>
+	 * @throws Exception
+	 ***/
 	public HashMap<String, Boolean> verifyTheSearchFunctionalityInNewTable() throws Exception {
 		String tableName=resourceMap.get("tableName");	
 		seleniumHelper.sleepWait(3);
@@ -195,6 +231,12 @@ public class TablesPage {
 		return results;
 	}
 	
+	/***
+	 * Verify The Labels Of Delete Table Popup
+	 * @author Veeramallesha CN
+	 * @return HashMap<String, Boolean>
+	 * @throws Exception
+	 ***/
 	public HashMap<String, Boolean> verifyTheLabelsOfDeleteTablePopup() throws Exception {
 		Map<String, String> dataMap = PropertyHelper.readTestDataJson("UXP-1124");
 		System.out.println(dataMap);
@@ -225,6 +267,12 @@ public class TablesPage {
 		return results;
 	}
 	
+	/***
+	 * Verify The Adding NewTable Functionality
+	 * @author Veeramallesha CN
+	 * @return HashMap<String, Boolean>
+	 * @throws Exception
+	 ***/
 	public HashMap<String, Boolean> verifyTheAddingNewTableFunctionality() throws Exception {
 		seleniumHelper.sleepWait(3);
 		String s = "Table2";
